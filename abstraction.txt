@@ -1,0 +1,32 @@
+Gameboard is supposed to be an array inside the gameboard object
+Each player should also be an object, each with a value (X and O) and pertinent methods
+The game flow itself (which players turn it is, which cells are filled and who wins)
+should also be an object.
+Each cell (a1, a2, a3, b1, b2, b3, c1, c2, c3) is an item on the gameboard array inside the gameboard object
+
+1) set up HTML and CSS
+    1.1) html: body>main>section(button + paragraph  ) + section(gameboard)> 9 divs on a 3x3 grid (0 gap,
+css borders will make for perfect # gameboard) 
+2) set up css - center startGame button+Paragraph and gameboard sections with flexbox.
+    2.1) use borders on the 9 divs to create a # pattern. Divs should all have the same size with easy-to-read text for "X" and "O"
+    2.2) 1: down-right, 2: sides-down, 3: down-left, 4: all but left, 5: all 6: all but right 7: up-right 8: all but down 9: up-left.
+3) add functionality to gameboard
+    3.1) each div should have an event listener tied to it so that once it's clicked it is marked by the current player
+    3.2) once a div has been claimed by a player the other player cannot claim it.  
+    3.3) a claimed div has either an X or an O depending on the claiming player 
+    3.4) check for all possible combinations that could result in a win
+        3.4.1) for a square on the following orientation:
+        123
+        456
+        789
+        the winning combinations would be 123, 147, 258, 369, 456, 789, 159 and 357. 
+        4.4.2) options: set up ifs on every claim verifying who claims these locations and return winningPlayer 
+        if one of these combinations is found, else check if every div has been filled and if yes then return draw
+    
+    //
+4) add functionality to reset button
+    4.1) on click it should wipe the board and all stored values.
+5) add functionality to playerTurnTracker paragraph (X or O player's turn indicator).
+6) add footer and release 1.0;
+7) add inteligence(minimax algorithm?)
+
