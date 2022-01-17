@@ -1,0 +1,50 @@
+html {
+  text-align: center;
+  background-color: bisque;
+}
+header {
+  background-color: bisque;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.game-board {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 400px;
+  height: 400px;
+}
+.gameDiv {
+  /* background-color: red; */
+  display: grid;
+  border: 10px solid black;
+  align-content: space-evenly;
+  font-size: 80px;
+}
+.div1,
+.div4,
+.div7 {
+  border-left: 0;
+}
+.div1,
+.div2,
+.div3 {
+  border-top: 0;
+}
+.div3,
+.div6,
+.div9 {
+  border-right: 0;
+}
+
+.div7,
+.div8,
+.div9 {
+  border-bottom: 0;
+}
